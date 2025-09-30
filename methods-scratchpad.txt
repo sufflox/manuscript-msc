@@ -1,0 +1,27 @@
+I asked Claude.ai to ask me questions.
+
+Sampling Questions:
+1. When did you conduct your field sampling? (specific months/years, and was it all done in one field season or multiple?)
+2. How did you select which individuals to sample within each population? (random sampling, systematic transects, targeting specific areas, etc.)
+3. What was your sampling strategy for spacing? (did you maintain minimum distances between sampled individuals, and if so, how far apart?)
+4. What type of tissue did you collect? (leaves, stems, roots?) And how much tissue per individual?
+5. How did you preserve and store the samples? (silica gel, liquid nitrogen, freezer storage, etc.)
+6. Did you take any GPS coordinates or create maps of your sampling locations?
+7. What permits or permissions did you need to collect from these endangered plant populations?
+
+Library Prep & Sequencing Questions:
+8. What RADSeq protocol are you using specifically? (ddRAD, ezRAD, original RAD, etc.) And which restriction enzyme(s)?
+9. Are you doing the library preparation yourself or sending samples to a sequencing facility? If facility - which one?
+10. What sequencing platform and read configuration? (Illumina NovaSeq, HiSeq, etc. and single-end vs paired-end, read length)
+11. How many samples are you multiplexing per lane/run?
+12. Did you include any controls (blanks, replicates, etc.)?
+
+Filtering and assembly:
+13. What software/pipeline are you planning to use for processing the raw reads? (Stacks, ipyrad, dDocent, etc.)
+14. What are your quality filtering parameters going to be? (minimum read depth, missing data thresholds, etc.)
+15. Are you planning to use a reference genome or do de novo assembly? (I believe there might not be a reference for Polemonium?)
+
+Analysis questions:
+16. For clone detection - what genetic similarity threshold will you use to consider individuals as clones?
+17. What population genetics statistics are you planning to calculate? (FST, heterozygosity, allelic richness, etc.)
+
