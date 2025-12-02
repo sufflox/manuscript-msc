@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+%% This file is 'methods.tex'.
+%\title{General methods}
+%\author{Sufia Khader}
+%\date{6 August 2025}
+
+\begin{document}
+
+%\maketitle
+%% Divide the chapter in sections.
+
+%% Methods
+\section{Materials and methods}
+\textit{Polemonium vanbruntiae} (Polemoniaceae) has a disjunct distribution; one cluster of 8-10 sites in Southern Quebec (Eastern Townships) and 2 clusters in New Brunswick (suspected of being introduced there) [Figure 1 - range map and sites]. Occurrence on limestone bedrock in NB (Todd Watts, 2024).
+Range of distribution, quirks. Canadian range and habitat. Known and unknown aspects. Status under the laws. We obtained permission and permits.
+
+\subsection{Sampling design}
+We had two sampling designs to address our two questions. To investigate how widespread is clonality we focused on three sites and collected samples on transects. To analyse the broader population structure of the species in the region we resorted to random sampling in 11 sites [table 1 - sample sizes for just the samples that were used for sequencing?]. Check that with Simon. 
+I should mention the people who helped us sample. The dates when samples were collected. Mention how the samples were stored and that genomic DNA was extracted following the CTAB protocol with modifications for our purposes (cite the Joly version of the protocol).
+
+\subsection{DNA library preparation}
+Samples collected from the field were stored in -80 then lyophilized and DNA extracted by a modified CTAB protocol. We made 3RAD libraries with molecular ID tags. We improvised extra amplifications and sent the libraries to ULaval under specific specifications (parameters we chose for sequencing).
+
+\subsection{Sequence assemblies}
+The raw fastq files were stored on Ripley. PCR duplicates removed by Bloomfilter method. Demultiplexing each plate separately then merged at step 2 of ipyrad. Due to constraints of disk space the random samples and transect samples were assembles in separate assemblies. Clustering threshold of 0.91.
+As no reference genome exists for \textit{P. vanbruntiae}, we assembled the reads de novo using iPyRAD version ?.?.? using default parameters. Because we were concerned about ploidy levels, we tested the parameter setting and found that ?? worked best.
+
+\subsection{Population genetic structure}
+Least squares approach was used to explore the genetic structure of the sampled populations, instead of a Bayesian (max liklihood) approach like STRUCTURE. 
+
+The optimal number of clusters was determined by the cross-entropy criterion. 
+
+What do the different sites and occurrences represent in terms of population structure and genetic diversity of the species? What is the genetic structure of the species at this end of its distribution? An admixture analysis can answer these questions. The goal of the analysis is to cluster individuals into a given number of genetic groups. Normally, people do this with the popular software STRUCTURE. We are using LEA; it does the same thing as STRUCTURE but is computationally less resource intensive (how?) and in the spirit of lowering our environmental footprint and given that it does the same job, this was our clear winner. The software does the same job as others, but at a fraction of the computing resources. i.e. without loss of accuracy.
+
+We're interested in this question for drawing inferences about the history of this species in this region. Estimation of ancestry proportions was performed with LEA (instead of ADMIXTURE or STRUCTURE) as it is ~10-30 times less resource hungry (faster) without loss of accuracy.
+
+I talk about the tests and software we used for calculating the appropriate scores from the data and the data we used to obtain this. A reasoning for why these particular characters of the data we a re looking into and how they serve our biological question.
+
+\subsection{Assignment of clones}
+I talk about the particular algorithm we used for this analysis. The explanation behind the logic for using it. The input data and sample size and how the data were treated.
+Genetic distances were computed between individuals using SimJoly's POFAD algorithm. Technical replicates confirmed that we were on the right track.
+
+See the texts about genetic-distances.\\
+Hamming distance\\
+Raw distance\\
+Ward clustering
+
+
+%% End of file 'methods.tex'.
+
+\end{document}
+
